@@ -1,0 +1,46 @@
+<div class="employee-details">
+    <mat-form-field class="input-group">
+        <mat-label>ID</mat-label>
+        <input type="text" matInput [value]="selectedEmployee.id" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="input-group">
+        <mat-label>First Name</mat-label>
+        <input type="text" matInput [value]="selectedEmployee.firstName" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="input-group">
+        <mat-label>Last Name</mat-label>
+        <input type="text" matInput [value]="selectedEmployee.lastName" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="input-group">
+        <mat-label>E-mail:</mat-label>
+        <input type="email" matInput [value]="selectedEmployee.email" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="input-group">
+        <mat-label>City:</mat-label>
+        <input type="email" matInput [value]="selectedEmployee.address.city" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="input-group">
+        <mat-label>State:</mat-label>
+        <input type="email" matInput [value]="selectedEmployee.address.state" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="input-group">
+        <mat-label>Country:</mat-label>
+        <input type="email" matInput [value]="selectedEmployee.address.country" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="input-group">
+        <mat-label>Postal Code:</mat-label>
+        <input type="email" matInput [value]="selectedEmployee.address.postalCode" readonly>
+    </mat-form-field>
+
+    <mat-form-field class="input-group">
+        <mat-label>Phone Number:</mat-label>
+        <input type="email" matInput [value]="selectedEmployee.address.phoneNumber" readonly>
+    </mat-form-field>
+</div>

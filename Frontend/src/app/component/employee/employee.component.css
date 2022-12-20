@@ -1,0 +1,38 @@
+.table-wrapper {
+    width: 70%;
+    box-shadow: none;
+    margin: 0 auto;
+}
+
+.table-btn {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.table-actions {
+    display: flex;
+}
+
+.add-btn {
+    border: .1rem solid #000;
+    text-transform: uppercase;
+    padding: 0 .2rem;
+    margin-right: .5rem;
+    transition: background .3s;
+}
+
+.add-btn:hover {
+    background-color: aqua;
+}
+
+.search {
+    width: 30rem;
+    border: none;
+    border-bottom: .1rem solid #000;
+}
+
+.message {
+    float: right;
+}

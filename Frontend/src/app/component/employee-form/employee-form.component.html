@@ -1,0 +1,135 @@
+<h1 class="title">{{title}}</h1>
+
+<form [formGroup]="employeeForm" (submit)="onSubmit()">
+    <input *ngIf="isEditMode" type="hidden" name="id" formControlName="id">
+
+    <mat-form-field class="example-full-width">
+        <mat-label>First Name</mat-label>
+        <input type="text" matInput formControlName="firstName">
+
+        <mat-error *ngIf="firstName.errors?.['required']">
+            First name is required.
+        </mat-error>
+        <mat-error *ngIf="firstName.errors?.['minlength']">
+            First name must be at least 2 characters long.
+        </mat-error>
+        <mat-error *ngIf="firstName.errors?.['maxlength']">
+            First name must have maximum 45 characters long.
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Last Name</mat-label>
+        <input type="text" matInput formControlName="lastName">
+
+        <mat-error *ngIf="lastName.errors?.['required']">
+            Last name is required.
+        </mat-error>
+        <mat-error *ngIf="lastName.errors?.['minlength']">
+            Last name must be at least 2 characters long.
+        </mat-error>
+        <mat-error *ngIf="lastName.errors?.['maxlength']">
+            Last name must have maximum 45 characters long.
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>E-mail</mat-label>
+        <input type="email" matInput formControlName="email">
+
+
+        <mat-error *ngIf="email.errors?.['required']">
+            E-mail is required.
+        </mat-error>
+        <mat-error *ngIf="email.errors?.['minlength']">
+            E-mail must be at least 5 characters long.
+        </mat-error>
+        <mat-error *ngIf="email.errors?.['maxlength']">
+            E-mail must have maximum 125 characters long.
+        </mat-error>
+        <mat-error *ngIf="email.errors?.['email']">
+            E-mail is not valid.
+        </mat-error>
+    </mat-form-field>
+
+    <!-- Address -->
+    <div formGroupName="address" style="display: flex; flex-direction: column;">
+        <mat-form-field class="example-full-width">
+            <mat-label>City</mat-label>
+            <input type="text" matInput formControlName="city">
+
+            <mat-error *ngIf="city.errors?.['required']">
+                City is required.
+            </mat-error>
+            <mat-error *ngIf="city.errors?.['minlength']">
+                City must be at least 2 characters long.
+            </mat-error>
+            <mat-error *ngIf="city.errors?.['maxlength']">
+                City must have maximum 20 characters long.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>State</mat-label>
+            <input type="text" matInput formControlName="state">
+
+            <mat-error *ngIf="state.errors?.['required']">
+                State is required.
+            </mat-error>
+            <mat-error *ngIf="state.errors?.['minlength']">
+                State must be at least 2 characters long.
+            </mat-error>
+            <mat-error *ngIf="state.errors?.['maxlength']">
+                State must have maximum 20 characters long.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Country</mat-label>
+            <input type="text" matInput formControlName="country">
+
+            <mat-error *ngIf="country.errors?.['required']">
+                Country is required.
+            </mat-error>
+            <mat-error *ngIf="country.errors?.['minlength']">
+                Country must be at least 2 characters long.
+            </mat-error>
+            <mat-error *ngIf="country.errors?.['maxlength']">
+                Country must have maximum 20 characters long.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Postal Code</mat-label>
+            <input type="text" matInput formControlName="postalCode">
+
+            <mat-error *ngIf="postalCode.errors?.['required']">
+                Postal Code is required.
+            </mat-error>
+            <mat-error *ngIf="postalCode.errors?.['minlength']">
+                Postal Code must be at least 2 characters long.
+            </mat-error>
+            <mat-error *ngIf="postalCode.errors?.['maxlength']">
+                Postal Code must have maximum 20 characters long.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Phone Number</mat-label>
+            <input type="text" matInput formControlName="phoneNumber">
+
+            <mat-error *ngIf="phoneNumber.errors?.['required']">
+                Phone Number is required.
+            </mat-error>
+            <mat-error *ngIf="phoneNumber.errors?.['minlength']">
+                Phone Number must be at least 10 characters long.
+            </mat-error>
+            <mat-error *ngIf="phoneNumber.errors?.['maxlength']">
+                Phone Number must have maximum 15 characters long.
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <input type="submit" color="primary" [value]="isEditMode? 'update' : 'save'"
+        [disabled]="employeeForm.invalid" class="submit-btn">
+</form>

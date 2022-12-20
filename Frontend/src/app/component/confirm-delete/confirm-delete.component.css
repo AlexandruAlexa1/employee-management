@@ -1,0 +1,9 @@
+.confirm-modal-message {
+    text-align: center;
+    margin: 4rem auto;
+    font-size: 1.8rem;
+}
+
+.confirm-modal-btns {
+    float: right;
+}

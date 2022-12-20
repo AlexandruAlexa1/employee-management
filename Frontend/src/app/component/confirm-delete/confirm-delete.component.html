@@ -1,0 +1,8 @@
+<div class="confirm-modal">
+    <p class="confirm-modal-message">You are sure?<br> You want to delete Employee with ID: {{id}}?</p>
+
+    <div class="confirm-modal-btns">
+        <button mat-raised-button routerLink="/employees" (click)="onNoClick()">NO</button>
+        <a mat-raised-button (click)="deleteEmployee()">YES</a>
+    </div>
+</div>
